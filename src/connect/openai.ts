@@ -4,12 +4,22 @@ import type { ChatConfig, ChatService } from "./types.ts";
 /**
  * OpenAI 聊天服务实现
  */
+/**
+ * OpenAIChat 类实现了 ChatService 接口，用于提供与 OpenAI API 的聊天功能
+ * 支持流式输出，可以逐块返回生成的内容
+ */
 export class OpenAIChat implements ChatService {
+  // 私有属性，用于存储 ChatOpenAI 实例
   private chat: ChatOpenAI;
 
+  /**
+   * 构造函数，初始化 OpenAI 聊天服务
+   * @param config 配置对象，包含 API 密钥、模型名称和基础 URL 等信息
+   */
   constructor(config: ChatConfig) {
+    // 创建并配置 ChatOpenAI 实例
     this.chat = new ChatOpenAI({
-      apiKey: config.apiKey,
+      apiKey: config.apiKey,    // API 密钥
       model: config.model,
       configuration: {
         baseURL: config.baseUrl,
