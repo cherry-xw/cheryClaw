@@ -13,7 +13,6 @@ export class OpenAIChat implements ChatService {
   private chat: ChatOpenAI;
 
   constructor(config: ChatConfig) {
-    // 创建并配置 ChatOpenAI 实例
     this.chat = new ChatOpenAI({
       apiKey: config.apiKey,
       model: config.model,
