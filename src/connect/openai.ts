@@ -14,7 +14,7 @@ export class OpenAIChat implements ChatService {
       streaming: true,
     });
   }
-
+  // 111
   async *stream(message: string): AsyncIterable<string> {
     const stream = await this.chat.stream(message);
     for await (const chunk of stream) {
