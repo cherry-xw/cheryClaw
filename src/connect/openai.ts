@@ -12,10 +12,6 @@ export class OpenAIChat implements ChatService {
   // 私有属性，用于存储 ChatOpenAI 实例
   private chat: ChatOpenAI;
 
-  /**
-   * 构造函数，初始化 OpenAI 聊天服务
-   * @param config 配置对象，包含 API 密钥、模型名称和基础 URL 等信息
-   */
   constructor(config: ChatConfig) {
     // 创建并配置 ChatOpenAI 实例
     this.chat = new ChatOpenAI({
