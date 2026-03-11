@@ -9,7 +9,6 @@ import type { ChatConfig, ChatService } from "./types.ts";
  * 支持流式输出，可以逐块返回生成的内容
  */
 export class OpenAIChat implements ChatService {
-  // 私有属性，用于存储 ChatOpenAI 实例
   private chat: ChatOpenAI;
 
   constructor(config: ChatConfig) {
