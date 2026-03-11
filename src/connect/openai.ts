@@ -2,9 +2,6 @@ import { ChatOpenAI } from "@langchain/openai";
 import type { ChatConfig, ChatService } from "./types.ts";
 
 /**
- * OpenAI 聊天服务实现
- */
-/**
  * OpenAIChat 类实现了 ChatService 接口，用于提供与 OpenAI API 的聊天功能
  */
 export class OpenAIChat implements ChatService {
