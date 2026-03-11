@@ -26,7 +26,6 @@ export class OpenAIChat implements ChatService {
   }
 }
 
-/** 创建 OpenAI 聊天服务实例 */
 export function createOpenAIChat(config: ChatConfig): ChatService {
   return new OpenAIChat(config);
 }
